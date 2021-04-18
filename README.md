@@ -1,7 +1,7 @@
-![rosgraph](https://user-images.githubusercontent.com/73032093/115158081-febaab00-a07b-11eb-855d-b8fdd51d1f2f.png)
-Research_Track_first assignment  by Vikass Reddy 
 
-this assignment is going to control holonomic robot in a 2d space.
+Research_Track_first assignment   (Ginne Vikas Reddy)(matricola 5061211)
+The assignment requires controlling a holonomic robot in a 2d space with a simple 2d simulator
+
 ### A brief explanation of the Algorithm
 1. The robot asks for a random target, with both coordinates in the interval (-6.0, 6.0).
 2. The robot reaches the target.
@@ -13,29 +13,47 @@ node
 First node: (assignment1)
 
 ROS publisher: publishing the robot speed
+ROS subscribe: subscribe for robot position
 ROS client: receiving a random target
 
-Second node: (project1)
+Second node: (node1)
 ROS server: Service Server replys to the client with a random target
 
-Costum service
-Random_Target service: return two random positions between [-6.0, 6.0]
 
-How to run the code
-After git clone, move repository to /home/
-Add the line 'source /home/my_ros_ws/devel/setup.bash' in your .bashrc file.
+## How to run the code
+git clone the package
 
-Change the directory to the workspace /home/my_ros_ws/
-Build the packages 'catkin_make'
+`https://github.com/vikasreddy636/Research_Track1-first-assignment.git`
 
-Refresh 'rospack profile'
-Run the simulator
+create a workspace in root repositories
 
-$ roscore &
-$ rosrun stage_ros stageros $(rospack find assignment1)/world/exercise.world
+`mkdir "name of the workspace" `
+
+move the git package to the src folder of that workspace
+
+Build the package
+
+`catkin_make`
+
+Refresh the workspace using
+
+`rospack profile`
+
+##Run the simulator
+
+To start rosmaster
+
+ 'roscore'
+ 
+ To launch the simulator
+ 
+ 'rosrun stage_ros stageros $(rospack find assignment1)/world/exercise.world'
 
 Run the service node
-$ rosrun project1 project1
+'rosrun project1 project1'
 
 Run the First node
-$ rosrun assignment1 assignment1
+'rosrun assignment1 assignment1'
+
+## Software architecture
+![rosgraph](https://user-images.githubusercontent.com/73032093/115158081-febaab00-a07b-11eb-855d-b8fdd51d1f2f.png)
