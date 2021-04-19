@@ -50,7 +50,7 @@ To start rosmaster
  'rosrun stage_ros stageros $(rospack find assignment1)/world/exercise.world'
 
 Run the service node
-'rosrun project1 project1'
+'rosrun node1 node1'
 
 Run the First node
 'rosrun assignment1 assignment1'
